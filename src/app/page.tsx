@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Section from "../components/Section";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
+import ContactForm from "../components/ContactForm";
 import Image from "next/image";
 
 export default function Page() {
@@ -153,13 +154,7 @@ export default function Page() {
         <Section id="contact" kicker="Get started" title="Free 20-minute consult">
           <div className="grid gap-6 grid-cols-1 grid-cols-2-md">
             <Card>
-              <form className="grid gap-3" onSubmit={(e)=>e.preventDefault()}>
-                <input className="input" placeholder="Your name" aria-label="Your name"/>
-                <input className="input" placeholder="Company" aria-label="Company"/>
-                <input className="input" placeholder="Email" type="email" aria-label="Email"/>
-                <textarea className="input" placeholder="What do you want to automate?" rows={4} aria-label="Message"/>
-                <button className="btn btn-primary btn-glow" type="submit">Request consult</button>
-              </form>
+              <ContactForm />
               <div className="mt-4 text-sm opacity-70">Prefer email? <a className="underline" href="mailto:info@maibizz.be">info@maibizz.be</a></div>
             </Card>
             <Card>
